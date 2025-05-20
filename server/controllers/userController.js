@@ -2,6 +2,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import validator from "validator";
 import userModel from "../models/userModel.js";
+import dotenv from "dotenv";
 
 // INFO: Function to create token
 const createToken = (id) => {
