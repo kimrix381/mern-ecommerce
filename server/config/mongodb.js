@@ -5,7 +5,7 @@ const connectDB = async () => {
     console.log("MongoDB connected");
   });
 
-  await mongoose.connect(process.env.MONGO_URI);
+  await mongoose.connect(`${process.env.MONGO_URI}/trendify`);
 };
 
 export default connectDB;
