@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+const baseUrl = import.meta.env.VITE_BACKEND_URL;
 
 const Login = () => {
   const [currentState, setCurrentState] = useState("Sign Up");
@@ -16,8 +17,8 @@ const Login = () => {
 
     const endpoint =
       currentState === "Login"
-        ? "http://localhost:3005/api/user/login"
-        : "http://localhost:3005/api/user/register";
+        ? `${baseUrl}/api/user/login`
+        : `${baseUrl}/api/user/register`;
 
     try {
       const res = await fetch(endpoint, {
